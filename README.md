@@ -66,7 +66,7 @@ CREATE TABLE vehicles (
   owner_id INT NOT NULL,
   brand_id INT NOT NULL,
   model VARCHAR(100) NOT NULL,
-  registration_number VARCHAR(50) UNIQUE NOT NULL,
+  registration_no VARCHAR(50) UNIQUE NOT NULL,
   color VARCHAR(50),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (owner_id) REFERENCES owners(id) ON DELETE CASCADE,
@@ -131,7 +131,7 @@ INSERT INTO brands (name, country) VALUES
 3. vehicle table
 ```
 -- Insert vehicles
-INSERT INTO vehicles (owner_id, brand_id, model, registration_number, color) VALUES
+INSERT INTO vehicles (owner_id, brand_id, model, registration_no, color) VALUES
 (1, 1, 'Corolla Altis', 'DL10ABC1234', 'White'),
 (1, 3, 'Tata Nexon', 'DL10XYZ5678', 'Red'),
 (2, 2, 'Hyundai i20', 'MH12DEF3456', 'Black'),
