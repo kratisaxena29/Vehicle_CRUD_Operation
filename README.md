@@ -4,7 +4,7 @@
 A simple RESTful API built with **Node.js**, **Express**, and **MySQL**. The document is written using **swagger** and **Postman**
 
 ##Demo
-Hosted URL: [click here](https://vehicle-crud-operation.onrender.com/)
+Hosted URL: [click here](https://vehicle-crud-operation.onrender.com/health)
 Hosted Swagger Docs: [click here](https://vehicle-crud-operation.onrender.com/api-docs)
 
 ## Tech used and their usage 
