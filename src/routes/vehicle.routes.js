@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var controller = require("../controllers/vehicle.controller");
+// import { validateBody } from '../middlewares/validation';
+var vehicle_validator_1 = require("../validators/vehicle.validator");
+var asyncHandler_1 = require("../middlewares/asyncHandler");
+var yupValidator_1 = require("../validators/yupValidator");
+var router = (0, express_1.Router)();
+router.post('/', (0, asyncHandler_1.asyncHandler)((0, yupValidator_1.validateYupSchema)(vehicle_validator_1.vehicleSchema)), controller.addVehicle);
+router.put('/:id', (0, asyncHandler_1.asyncHandler)((0, yupValidator_1.validateYupSchema)(vehicle_validator_1.vehicleSchema)), controller.updateVehicle);
+router.delete('/:id', controller.deleteVehicle);
+router.get('/', controller.getAllVehicles);
+router.get('/:id', controller.getSingleVehicle);
+exports.default = router;
